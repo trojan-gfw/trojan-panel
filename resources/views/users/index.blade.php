@@ -14,16 +14,16 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Username</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">IsAdmin</th>
-                                    <th scope="col">Quota</th>
-                                    <th scope="col">Download</th>
-                                    <th scope="col">Upload</th>
-                                    <th scope="col">Remain</th>
-                                    <th scope="col">Edit</th>
-                                    <th scope="col">Delete</th>
+                                    <th nowrap scope="col">#</th>
+                                    <th nowrap scope="col">Username</th>
+                                    <th nowrap scope="col">Email</th>
+                                    <th nowrap scope="col">Is Admin</th>
+                                    <th nowrap scope="col">Quota</th>
+                                    <th nowrap scope="col">Download</th>
+                                    <th nowrap scope="col">Upload</th>
+                                    <th nowrap scope="col">Remain</th>
+                                    <th nowrap scope="col">Edit</th>
+                                    <th nowrap scope="col">Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -32,7 +32,7 @@
                                         list($quota, $download, $upload, $remain) = human_string($user->quota, $user->download, $user->upload);
                                     @endphp
                                     <tr>
-                                        <th scope="row">{{ $user->id }}</th>
+                                        <th nowrap scope="row">{{ $user->id }}</th>
                                         <td nowrap>{{ $user-> username }}</td>
                                         <td nowrap>{{ $user-> email }}</td>
                                         <td nowrap>{{ $user-> is_admin ? 'True' : 'False'}}</td>
@@ -50,7 +50,7 @@
                                                 </form>
                                             @endif
                                         </td>
-                                    <tr>
+                                    </tr>
                                 @endforeach
                             </tbody>
                         </table>
