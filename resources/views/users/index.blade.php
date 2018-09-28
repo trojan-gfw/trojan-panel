@@ -42,10 +42,13 @@
                                         <td nowrap>{{ $remain }}</td>
                                         <td nowrap><a href="users/{{ $user->id }}/edit" class="btn btn-info btn-sm">Edit</button></td>
                                         <td nowrap>
-                                            <form action="users/{{ $user->id }}" method="POST">
-                                                @method('PUT')
-                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                            </form>
+                                            @if (Auth::user()->id != $user->id)
+                                                <form action="users/{{ $user->id }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
+                                            @endif
                                         </td>
                                     <tr>
                                 @endforeach
