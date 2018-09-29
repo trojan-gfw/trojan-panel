@@ -59,7 +59,7 @@
                                         Home
                                     </a>
                                     @if (Auth::user()->is_admin == 1)
-                                        <a class="dropdown-item" href="{{ url('/users') }}">
+                                        <a class="dropdown-item" href="{{ route('users.index') }}">
                                             Manage
                                         </a>
                                     @endif

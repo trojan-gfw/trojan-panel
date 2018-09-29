@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-header">Edit User</div>
                 <div class="card-body">
-                    <form action="/users/{{ $user->id }}" method="POST">
+                    <form action="." method="POST">
                         @csrf
                         @method('PUT')
                         <div class="form-group row">
