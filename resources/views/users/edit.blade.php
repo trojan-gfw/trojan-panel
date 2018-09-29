@@ -33,7 +33,7 @@
                             <label for="is_admin" class="col-sm-4 col-form-label text-md-right">Is Admin</label>
                             <div class="col-md-6">
                                 <div class="col-form-check">
-                                    <input id="is_admin" type="checkbox" class="col-form-check-input" name="is_admin" checked="{{ $user->is_admin == 1 ? 'true' : 'false' }}">
+                                    <input id="is_admin" type="checkbox" class="col-form-check-input" name="is_admin" {{ $user->is_admin == 1 ? 'checked' : '' }}>
                                     <label class="col-form-label" for="is_admin">
                                         Is Admin
                                     </label>
