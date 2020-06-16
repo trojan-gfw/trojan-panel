@@ -51,7 +51,7 @@ class UserController extends Controller
             $user->password = hash('sha224', $user->username . ':' . $request['password']);
         }
         $user->is_admin = $request['is_admin'] == 'on' ? 1 : 0;
-        $user->quota = $request['quota']*1024*1024; // Now the unit is in MB.
+        $user->quota = $request['quota'] * 1048576;
         $user->save();
         return redirect('users');
     }
