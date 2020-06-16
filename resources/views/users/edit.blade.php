@@ -41,9 +41,9 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="quota" class="col-sm-4 col-form-label text-md-right">Quota</label>
+                            <label for="quota" class="col-sm-4 col-form-label text-md-right">Quota (in MB)</label>
                             <div class="col-md-6">
-                                <input id="quota" type="number" class="form-control" name="quota" value="{{ $user->quota }}">
+                                <input id="quota" type="number" class="form-control" name="quota" value="{{ $user->quota / 1048576 }}">
                             </div>
                         </div>
                         <div class="form-group row mb-0">
