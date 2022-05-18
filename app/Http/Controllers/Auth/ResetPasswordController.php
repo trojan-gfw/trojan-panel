@@ -43,7 +43,7 @@ class ResetPasswordController extends Controller
     protected function resetPassword($user, $password)
     {
         $user->l_password = Hash::make($password);
-        $user->password = hash("sha224", $data['username'] . ':' . $password);
+        $user->password = hash("sha224", $user->username . ':' . $password);
         $user->setRememberToken(Str::random(60));
         $user->save();
         event(new PasswordReset($user));
